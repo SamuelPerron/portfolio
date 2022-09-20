@@ -11,6 +11,31 @@ class Position(models.Model):
     )
     allocation = models.FloatField(blank=False)
 
+    def get_current_position_size(self):
+        raise NotImplementedError()
+
+    def get_nb_shares(self):
+        raise NotImplementedError()
+
+    def get_cost_basis(self):
+        raise NotImplementedError()
+
+    def get_total_invested(self):
+        raise NotImplementedError()
+
+    def get_investment_value(self):
+        raise NotImplementedError()
+
+    def get_roi(self):
+        raise NotImplementedError()
+
+    def get_day_pl(self):
+        raise NotImplementedError()
+
+    def get_leftovers(self):
+        raise NotImplementedError()
+
+
     def __str__(self):
         return f'{self.account} - {self.exchange}.{self.symbol}'
 
