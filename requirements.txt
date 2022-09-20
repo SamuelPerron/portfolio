@@ -8,3 +8,4 @@ redis
 praw
 django-environ
 django-filter
+pytest-django
